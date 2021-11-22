@@ -54,7 +54,6 @@ def PrintResult(result, LEN):
     print("小順機率：" + str(round(100*(result[3]/LEN), 2)) + "%")
     print("同花小順機率：" + str(round(100*(result[4]/LEN), 2)) + "%")
     print()
-
 def BettingOdds(result, LEN):
     print("-----------------------------------------")
     print("建議賠率算法 0.9 * (進行次數 / 牌型出現機率)")
@@ -66,7 +65,7 @@ def BettingOdds(result, LEN):
     print("小順賠率：" + str(round(0.9*LEN/result[3], 2)))
     print("同花小順賠率：" + str(round(0.9*LEN/result[4], 2)))
     print()
-    
+
 LEN = 10000
 result = np.array([0 for i in range(6)])
 for time in range(LEN):
